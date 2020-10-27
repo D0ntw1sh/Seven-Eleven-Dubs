@@ -1,0 +1,298 @@
+import random
+
+print("This is 7 11 Dubs")
+print("You can either roll for 7 11 or duoble-Dubs")
+print("At any time if you type done the game will be over")
+m = int(input("How much money do you have in total? "))
+game = 1
+while game == 1:
+    g = input("seven eleven or dubs? ")
+    print("You have $" + str(m))
+    b = int(input("How much would you like to bet on this roll? "))
+
+    if g == "done":
+        game = 2
+    if g == "seven eleven":
+        a = 1
+
+        while a == 1:
+            r1 = random.randint(1,6)
+            r2 = random.randint(1,6)
+            g1 = r1 + r2
+
+            r3 = random.randint(1,6)
+            r4 = random.randint(1,6)
+            g2 = r3 + r4
+
+            print("You got " + str(r1) + " , " + str(r2))
+            print("The other person got " + str(r3) + " , " + str(r4))
+
+            if g1 == 7:
+                if g2 == 7:
+                    continue
+                elif g2 == 11:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            if g2 == 7:
+                if g1 == 7:
+                    continue
+                elif g1 == 11:
+                    continue
+                else:
+                    print("You lose and your opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+
+            if g1 == 11:
+                if g2 == 11:
+                    continue
+                elif g2 == 7:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            if g2 == 11:
+                if g1 == 11:
+                    continue
+                elif g1 == 7:
+                    continue
+                else:
+                    print("You lose and your opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+
+    if g == "dubs":
+        a = 1
+        while a == 1:
+            r1 = random.randint(1,6)
+            r2 = random.randint(1,6)
+            g1 = r1 + r2
+
+            r3 = random.randint(1, 6)
+            r4 = random.randint(1, 6)
+            g2 = r3 + r4
+
+            print("You got " + str(r1) + " , " + str(r2))
+            print("The other person got " + str(r3) + " , " + str(r4))
+
+            rr = str(r1) + str(r2)
+            rr2 = str(r3) + str(r4)
+            rr = int(rr)
+            rr2 = int(rr2)
+
+            if rr == 11:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            elif rr == 22:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            elif rr == 33:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            elif rr == 44:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            elif rr == 55:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            elif rr == 66:
+                if rr2 == 11:
+                    continue
+                elif rr2 == 22:
+                    continue
+                elif rr2 == 33:
+                    continue
+                elif rr2 == 44:
+                    continue
+                elif rr2 == 55:
+                    continue
+                elif rr2 == 66:
+                    continue
+                else:
+                    print("You win with " + str(r1) + " , " + str(r2))
+                    m = m + b
+                    a = 2
+
+            if rr2 == 11:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+            elif rr2 == 22:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+            elif rr2 == 33:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+            elif rr2 == 44:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+            elif rr2 == 55:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
+            elif rr2 == 66:
+                if rr == 11:
+                    continue
+                elif rr == 22:
+                    continue
+                elif rr == 33:
+                    continue
+                elif rr == 44:
+                    continue
+                elif rr == 55:
+                    continue
+                elif rr == 66:
+                    continue
+                else:
+                    print("You lose and you opponent had " + str(r3) + " , " + str(r4))
+                    m = m - b
+                    a = 2
